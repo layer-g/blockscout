@@ -93,6 +93,7 @@ services:
       - backend
       - frontend
       - stats
+      - nginx
     extends:
       file: ./services/docker-compose-nginx.yml
       service: certbot
