@@ -79,14 +79,14 @@ services:
       file: ./services/docker-compose-stats.yml
       service: stats
 
-  # nginx:
-  #   depends_on:
-  #     - backend
-  #     - frontend
-  #     - stats
-  #   extends:
-  #     file: ./services/docker-compose-nginx.yml
-  #     service: proxy
+  nginx:
+    depends_on:
+      - backend
+      - frontend
+      - stats
+    extends:
+      file: ./services/docker-compose-nginx.yml
+      service: proxy
 
   # certbot:
   #   depends_on:
