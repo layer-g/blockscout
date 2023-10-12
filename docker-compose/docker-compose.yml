@@ -79,7 +79,7 @@ services:
       file: ./services/docker-compose-stats.yml
       service: stats
 
-  proxy:
+  nginx:
     depends_on:
       - backend
       - frontend
