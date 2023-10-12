@@ -9,7 +9,8 @@ server {
     listen       [::]:80 default_server;
     server_name  explore.telcoin.network;
 
-    location /.well-known/acme-challenge/ {
+    location ~ /.well-known/acme-challenge {
+        allow all;
         root /var/www/certbot;
     }
 
